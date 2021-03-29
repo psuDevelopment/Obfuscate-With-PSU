@@ -5,9 +5,28 @@ inputs:
   file:
     description: "The file to obfuscate"
     required: true
+  apiKey:
+    description: "Your API key"
+    required: true
+  options:
+    description: "The options to submit to the API"
+    required: true
+    defaults: |
+      {
+        "DisableSuperOperators": false,
+        "MaximumSecurityEnabled": false,
+        "EncryptAllStrings": false,
+        "DisableAllMacros": false,
+        "EnhancedOutput": false,
+        "CompressedOutput": false,
+        "PremiumFormat": false,
+        "ByteCodeMode": "Default"
+      }
 outputs:
   file:
     description: "The obfuscated file"
 runs:
   using: "node12"
-  main: "src/index.js"
+  steps:
+    - run: node ${{ github.action_path }}/index.js
+      shell: bash

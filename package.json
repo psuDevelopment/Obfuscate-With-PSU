@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/psuDevelopment/Obfuscate-With-PSU/issues"
   },
-  "homepage": "https://psu.dev"
+  "homepage": "https://psu.dev",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "prettier": "^2.2.1"
+  }
 }
