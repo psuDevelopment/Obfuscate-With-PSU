@@ -17,7 +17,7 @@ const run = async () => {
   const filePath = getAbsolutePath(core.getInput("file", { required: true }));
   core.debug(`Path: ${filePath}`);
 
-  const script = fs.readFileSync(path, { encoding: "utf8" });
+  const script = fs.readFileSync(filePath, { encoding: "utf8" });
   core.debug(`Text: ${text}`);
 
   axios
