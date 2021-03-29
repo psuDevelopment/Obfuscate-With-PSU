@@ -20,7 +20,7 @@ Create a workflow `.yml` file in `.github/workflows` inside of your repository. 
 
 ### Inputs
 
--   `file` - The path to the file to be obfuscated
+-   `path` - The path to the file to be obfuscated
 -   `apiKey` - Your PSU API key, this can be specified through GitHub's secrets.
 
 ### Outputs
