@@ -27,9 +27,7 @@ outputs:
     description: "The obfuscated file"
 runs:
   using: "node12"
-  steps:
-    - run: node ${{ github.action_path }}/index.js
-      shell: bash
+  main: "src/index.js"
 branding:
   icon: 'shield'
   color: 'green'
