@@ -2,32 +2,32 @@ name: "Obfuscate with PSU"
 author: "ColdDev"
 description: "Allows you to obfuscate your Lua script files with PSU"
 inputs:
-  path:
-    description: "The file to obfuscate"
-    required: true
-  apiKey:
-    description: "Your API key"
-    required: true
-  options:
-    description: "The options to submit to the API"
-    required: true
-    defaults: |
-      {
-        "DisableSuperOperators": false,
-        "MaximumSecurityEnabled": false,
-        "EncryptAllStrings": false,
-        "DisableAllMacros": false,
-        "EnhancedOutput": false,
-        "CompressedOutput": false,
-        "PremiumFormat": false,
-        "ByteCodeMode": "Default"
-      }
+    path:
+        description: "The file to obfuscate"
+        required: true
+    apiKey:
+        description: "Your API key"
+        required: true
+    options:
+        description: "The options to submit to the API"
+        required: true
+        defaults: |
+            {
+              "DisableSuperOperators": false,
+              "MaximumSecurityEnabled": false,
+              "EncryptAllStrings": false,
+              "DisableAllMacros": false,
+              "EnhancedOutput": false,
+              "CompressedOutput": false,
+              "PremiumFormat": false,
+              "ByteCodeMode": "Default"
+            }
 outputs:
-  file:
-    description: "The obfuscated file"
+    file:
+        description: "The obfuscated file"
 runs:
-  using: "node12"
-  main: "src/index.js"
+    using: "node12"
+    main: "src/index.js"
 branding:
-  icon: 'shield'
-  color: 'green'
+    icon: "shield"
+    color: "green"
