@@ -2,7 +2,7 @@ const core = require("@actions/core");
 const path = require("path");
 const axios = require("axios");
 const os = require("os");
-const fs = require("fs/promises");
+const fs = require("fs").promises;
 
 const getAbsolutePath = (filePath) => {
     if (filePath[0] !== "~") return path.resolve(filePath);
