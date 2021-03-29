@@ -31,5 +31,5 @@ runs:
     - run: node ${{ github.action_path }}/index.js
       shell: bash
 branding:
-  icon: 'code'
+  icon: 'shield'
   color: 'green'
