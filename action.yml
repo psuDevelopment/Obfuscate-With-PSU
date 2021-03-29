@@ -2,7 +2,7 @@ name: "Obfuscate with PSU"
 author: "ColdDev"
 description: "Allows you to obfuscate your Lua script files with PSU"
 inputs:
-  file:
+  path:
     description: "The file to obfuscate"
     required: true
   apiKey:

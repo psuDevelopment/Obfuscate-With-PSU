@@ -14,7 +14,7 @@ const getAbsolutePath = (filePath) => {
 };
 
 const run = async () => {
-  const filePath = getAbsolutePath(core.getInput("file", { required: true }));
+  const filePath = getAbsolutePath(core.getInput("path", { required: true }));
   core.debug(`Path: ${filePath}`);
 
   const script = fs.readFileSync(filePath, { encoding: "utf8" });
