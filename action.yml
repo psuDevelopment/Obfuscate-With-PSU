@@ -1,0 +1,13 @@
+name: "Obfuscate with PSU"
+author: "ColdDev"
+description: "Allows you to obfuscate your Lua script files with PSU"
+inputs:
+  file:
+    description: "The file to obfuscate"
+    required: true
+outputs:
+  file:
+    description: "The obfuscated file"
+runs:
+  using: "node12"
+  main: "src/index.js"

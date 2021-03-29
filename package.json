@@ -1,0 +1,20 @@
+{
+  "name": "obfuscate-with-psu",
+  "version": "1.0.0",
+  "description": "This is a GitHub action that allows you to integrate PSU obfuscation into your pipeline.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psuDevelopment/Obfuscate-With-PSU.git"
+  },
+  "author": "ColdDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psuDevelopment/Obfuscate-With-PSU/issues"
+  },
+  "homepage": "https://psu.dev"
+}
