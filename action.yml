@@ -30,3 +30,6 @@ runs:
   steps:
     - run: node ${{ github.action_path }}/index.js
       shell: bash
+branding:
+  icon: 'code'
+  color: 'green'
