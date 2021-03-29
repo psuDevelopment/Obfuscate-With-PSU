@@ -18,7 +18,7 @@ const run = async () => {
   core.debug(`Path: ${filePath}`);
 
   const script = fs.readFileSync(filePath, { encoding: "utf8" });
-  core.debug(`Text: ${text}`);
+  core.debug(`Text: ${script}`);
 
   axios
     .post("https://api.psu.dev/obfuscate", {
