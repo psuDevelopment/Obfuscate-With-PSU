@@ -32,11 +32,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: psuDevelopment/Obfuscate-With-PSU@v1.0.0-BETA
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: obfuscate
+      uses: psuDevelopment/Obfuscate-With-PSU@main
       id: file
       with:
-        file: MyAwesomeScript.lua
+        path: ./Script.lua
         apiKey: ${{ secrets.PSU_API_KEY }}
+    - name: Echo obfuscated file
+      run: echo ${{ steps.obfuscate.outputs.file }}
 ```
 
 # Licensing
