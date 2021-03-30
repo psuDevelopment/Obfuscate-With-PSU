@@ -28,14 +28,14 @@ const run = async () => {
         .then(({ data }) => {
             if (data.status === "passed") core.setOutput("file", data.data);
         })
-        .catch(({ response: data }) => {
-            if (data.error) {
-                if (!data.reason)
+        .catch((err) => {
+            if (err.response.data.error) {
+                if (!err.response.data.reason)
                     return core.setFailed(
                         "An unknown error occurred while obfuscating the script. Sorry for the inconvenience."
                     );
                 core.setFailed(
-                    `An error occurred while obfuscating your script: ${data.reason}`
+                    `An error occurred while obfuscating your script: ${err.response.data.reason}`
                 );
             }
         });
