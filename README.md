@@ -40,9 +40,9 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@master
-            - name: obfuscate
+            - name: Obfuscate with PSU
               uses: psuDevelopment/Obfuscate-With-PSU@main
-              id: file
+              id: obfuscate
               with:
                   path: ./Script.lua
                   apiKey: ${{ secrets.PSU_API_KEY }}

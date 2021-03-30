@@ -17,9 +17,7 @@ const run = async () => {
     const filePath = getAbsolutePath(core.getInput("path", { required: true }));
     const script = await fs
         .readFile(filePath, { encoding: "utf8" })
-        .catch((err) => {
-            throw new Error(err);
-        });
+        .catch((err) => core.setFailed(err));
 
     axios
         .post("https://api.psu.dev/obfuscate", {
@@ -33,10 +31,10 @@ const run = async () => {
         .catch(({ response: data }) => {
             if (data.status === "failed") {
                 if (!data.reason)
-                    throw new Error(
+                    return core.setFailed(
                         "An unknown error occurred while obfuscating the script. Sorry for the inconvenience."
                     );
-                throw new Error(
+                core.setFailed(
                     `An error occurred while obfuscating your script: ${data.reason}`
                 );
             }
