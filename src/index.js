@@ -29,7 +29,7 @@ const run = async () => {
             if (data.status === "passed") core.setOutput("file", data.data);
         })
         .catch(({ response: data }) => {
-            if (data.status === "failed") {
+            if (data.error) {
                 if (!data.reason)
                     return core.setFailed(
                         "An unknown error occurred while obfuscating the script. Sorry for the inconvenience."
