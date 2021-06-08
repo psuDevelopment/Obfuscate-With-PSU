@@ -32,7 +32,7 @@ const run = async () => {
             if (err.response.data.error) {
                 if (!err.response.data.reason)
                     return core.setFailed(
-                        "An unknown error occurred while obfuscating the script. Sorry for the inconvenience."
+                        "An unknown error occurred while obfuscating the script. We apologise for the inconvenience."
                     );
                 core.setFailed(
                     `An error occurred while obfuscating your script: ${err.response.data.reason}`
